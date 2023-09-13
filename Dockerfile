@@ -14,7 +14,7 @@ RUN wget https://github.com/bogind/libecwj2-3.3/raw/master/libecwj2-3.3-2006-09-
     && unzip libecwj2-3.3-2006-09-06.zip \
     && patch -p0< libecwj2-3.3-msvc90-fixes.patch \
     && cd libecwj2-3.3 \
-    && rm config.guess && wget https://cvs.savannah.gnu.org/viewvc/*checkout*/config/config/config.guess \
+    && rm config.guess && wget https://cvs.savannah.gnu.org/viewvc/*checkout*/config/config/config.guess && chmod +x config.guess \
     && ./configure \
     && make \
     && make install \
